@@ -18,6 +18,6 @@ public class TestRedis {
 
     @Test
     public void test(){
-        cache.putCacheWithExpireTime("123456789","123456",60);
+        cache.putCacheWithExpireTime("12345","123456",60);
     }
 }

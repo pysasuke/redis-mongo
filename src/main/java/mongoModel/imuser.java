@@ -2,18 +2,20 @@ package mongoModel;
 
 import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Field;
 
 import java.util.ArrayList;
 
 /**
  * Created by DavidWang on 16/9/14.
  */
+//需要与mongo中对象(文档)名一致
 public class imuser {
 
     @Id
     private ObjectId _id;
 
-//    @Field
+    @Field
     private Long id;
 
     private String nikeName;
