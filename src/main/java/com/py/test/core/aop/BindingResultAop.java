@@ -12,6 +12,9 @@ import org.springframework.stereotype.Component;
 
 import java.lang.reflect.Method;
 
+/**
+ * 自定义aop
+ */
 //值越小优先级越高
 @Order(1)
 @Component

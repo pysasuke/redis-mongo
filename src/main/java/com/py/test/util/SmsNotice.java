@@ -27,6 +27,12 @@ public class SmsNotice {
 //        }
 //    }
 
+    /**
+     * 将字符串解析为对应的XML文档
+     * @param result
+     * @return
+     * @throws UnsupportedEncodingException
+     */
     public static boolean parserXml(String result) throws UnsupportedEncodingException {
         SAXReader saxReader = new SAXReader();
         try {

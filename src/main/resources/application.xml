@@ -4,7 +4,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
 		http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-
+    <!--加载spring-config.xml 文件-->
     <import resource="classpath:spring-config.xml"/>
 
 </beans>

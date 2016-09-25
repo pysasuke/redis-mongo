@@ -7,9 +7,8 @@ package com.py.test.common.enums;
 public enum DataEnum {
 
 
-
     //所有组织
-     DATAROLE_ALL(7),
+    DATAROLE_ALL(7),
     //个人
     DATAROLE_PERSONAL(4),
     //部门
@@ -19,10 +18,11 @@ public enum DataEnum {
 
     private int value;
 
-    private DataEnum(int value ){
+    private DataEnum(int value) {
         this.value = value;
     }
-    public int getValue(){
+
+    public int getValue() {
         return this.value;
     }
 }

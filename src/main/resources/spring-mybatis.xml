@@ -59,6 +59,7 @@
 
 	</bean>
 
+	<!--双数据库配置-->
 	<bean id="multipleDataSource" class="com.py.test.core.MultipleDataSource">
 		<property name="defaultTargetDataSource" ref="dataSource"/>
 		<property name="targetDataSources">
