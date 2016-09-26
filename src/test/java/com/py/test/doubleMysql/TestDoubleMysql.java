@@ -16,7 +16,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
  * Created by Administrator on 2016/9/21.
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration("classpath:application.xml")
+@ContextConfiguration("classpath:application.xml") //加载xml文件
 public class TestDoubleMysql {
     @Autowired
     private ImuserMapper imuserMapper;

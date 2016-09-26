@@ -11,6 +11,10 @@ import java.net.URL;
  *
  * @author Administrator
  */
+
+/**
+ * 发送短信验证码
+ */
 public class SendSMS {
 
 //    @Async

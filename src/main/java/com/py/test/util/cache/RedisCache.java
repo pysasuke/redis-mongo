@@ -20,6 +20,11 @@ import java.util.Set;
  * @author tudou
  *
  */
+
+/**
+ * setnx:设置 key 对应的值为 string 类型的 value。 如果 key 已经存在，返回 0， nx 是 not exist 的意思。
+ * setex:设置 key 对应的值为 string 类型的 value，并指定此键值对应的有效期。
+ */
 @Component
 public class RedisCache {
 	

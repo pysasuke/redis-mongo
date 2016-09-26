@@ -16,14 +16,14 @@ public class BaseResult {
         this.status= status;
         this.msg = msg;
     }
-    public BaseResult(String status, String msg, Object value){
+    public BaseResult(String status, String msg, Object data){
         this.status= status;
         this.msg = msg;
-        this.value = value==null?"":value;
+        this.data = data==null?"":data;
     }
-    private String status;
-    private String msg;
-    private Object value;
+    private String status; //返回状态  1:成功 ，0:失败
+    private String msg; //返回信息
+    private Object data;//返回数据
 
     public String getStatus() {
         return status;
@@ -41,11 +41,11 @@ public class BaseResult {
         this.msg = msg;
     }
 
-    public Object getValue() {
-        return value;
+    public Object getdata() {
+        return data;
     }
 
-    public void setValue(Object value) {
-        this.value = value;
+    public void setdata(Object data) {
+        this.data = data;
     }
 }

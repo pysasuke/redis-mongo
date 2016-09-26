@@ -5,7 +5,8 @@ package com.py.test.common.constant;
  * 全局常量类
  */
 public class Constant {
-    public static String VCODE = "vcode:";
+
+    public static String VCODE = "vcode:"; //存入redis中的手机验证码的key
 
     public static String CUNUM = "cu:";
 
