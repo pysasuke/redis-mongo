@@ -1,2 +1,5 @@
-/target
-/.idea
+.idea/*
+build/*
+webapp/WEB-INF/classes/*
+target/*
+classes/*

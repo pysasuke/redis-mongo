@@ -8,7 +8,4 @@ import com.py.test.dto.BaseResult;
  */
 public class BaseController {
     protected BaseResult result = new BaseResult();
-
-
-
 }
