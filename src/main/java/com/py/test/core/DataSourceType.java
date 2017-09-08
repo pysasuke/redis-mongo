@@ -8,6 +8,6 @@ package com.py.test.core;
  * 数据源类型
  */
 public class DataSourceType {
-    public static final String DB_TEAMTALK = "TeamTalkDataSource";
+    public static final String DB_IM = "IMDataSource";
     public static final String DB_ERP = "ERPDataSource";
 }

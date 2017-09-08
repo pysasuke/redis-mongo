@@ -13,11 +13,9 @@
 	<!-- 自动扫描(自动注入) -->
 	<context:component-scan base-package="com.py.test.*" />
 
-	<!-- 引入属性文件 -->
-	<!--<context:property-placeholder location="classpath:db.properties" />-->
 
 	<!-- 配置数据源 -->
-	<bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource"
+	<bean id="dataSource1" class="com.alibaba.druid.pool.DruidDataSource"
 		  init-method="init" destroy-method="close">
 		<property name="driverClassName" value="${db.driver}" />
 		<property name="url" value="${db.url}" />
@@ -38,7 +36,7 @@
 
 	</bean>
 
-	<bean id="dataSource1" class="com.alibaba.druid.pool.DruidDataSource"
+	<bean id="dataSource2" class="com.alibaba.druid.pool.DruidDataSource"
 		  init-method="init" destroy-method="close">
 		<property name="driverClassName" value="${db.driver}" />
 		<property name="url" value="${db1.url}" />
@@ -61,11 +59,11 @@
 
 	<!--双数据库配置-->
 	<bean id="multipleDataSource" class="com.py.test.core.MultipleDataSource">
-		<property name="defaultTargetDataSource" ref="dataSource"/>
+		<property name="defaultTargetDataSource" ref="dataSource1"/>
 		<property name="targetDataSources">
 			<map key-type="java.lang.String">
-				<entry key="ERPDataSource" value-ref="dataSource"/>
-				<entry key="TeamTalkDataSource" value-ref="dataSource1"/>
+				<entry key="ERPDataSource" value-ref="dataSource1"/>
+				<entry key="IMDataSource" value-ref="dataSource2"/>
 			</map>
 		</property>
 	</bean>
@@ -74,7 +72,7 @@
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="multipleDataSource" />
 		<!-- 自动扫描mapping.xml文件 -->
-		<property name="mapperLocations" value="classpath*:Mapper/*.xml" />
+		<property name="mapperLocations" value="classpath*:mapping/*.xml" />
 	</bean>
 
 	<!-- DAO接口所在包名，Spring会自动查找其下的类 -->

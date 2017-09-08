@@ -1,17 +1,14 @@
 package com.py.test.dao;
 
-import com.py.test.entity.Imuser;
+import com.py.test.entity.mysql.IMUser;
 
 public interface ImuserMapper {
     int deleteByPrimaryKey(Integer id);
 
-    int insert(Imuser record);
+    int insert(IMUser record);
 
-    int insertSelective(Imuser record);
+    IMUser selectByPrimaryKey(Integer id);
 
-    Imuser selectByPrimaryKey(Integer id);
+    int updateByPrimaryKeySelective(IMUser record);
 
-    int updateByPrimaryKeySelective(Imuser record);
-
-    int updateByPrimaryKey(Imuser record);
 }
